@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, #164b82, transparent 35%),
+        radial-gradient(circle at 80% 80%, #4c1d95, transparent 35%),
+        #030712;
+
+    color: white;
+}
+
+
+/* ===== SIGN UP FORM ===== */
+
+#signup-form {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* ===== MAIN CONTAINER ===== */
+
+.container {
+    position: relative;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.35);
+
+    overflow: hidden;
+}
+
+
+/* ===== GLASS LIGHT ===== */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    left: -80px;
+
+    width: 220px;
+    height: 220px;
+
+    background: rgba(70, 150, 255, 0.2);
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    pointer-events: none;
+}
+
+
+/* ===== TEXT ===== */
+
+h1 {
+    margin: 0 0 8px;
+
+    font-size: 34px;
+}
+
+.container > p {
+    color: #aeb8c7;
+}
+
+hr {
+    border: none;
+
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ===== LABELS ===== */
+
+label {
+    display: block;
+
+    margin: 18px 0 8px;
+
+    color: #dce4ef;
+}
+
+label i {
+    margin-left: 5px;
+
+    color: #8fbfff;
+}
+
+
+/* ===== INPUTS ===== */
+
+input {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #7f8da1;
+}
+
+input:focus {
+    border-color: rgba(100, 170, 255, 0.8);
+
+    box-shadow:
+        0 0 0 3px rgba(80, 150, 255, 0.12),
+        0 0 20px rgba(80, 150, 255, 0.15);
+       
+}
+input:hover{
+    border-color: rgba(100, 170, 255, 0.8);
+
+    box-shadow:
+        0 0 0 3px rgba(80, 150, 255, 0.12),
+        0 0 20px rgba(80, 150, 255, 0.15);
+     cursor: pointer;
+        transform: translateX(5px);
+}
+
+/* ===== LIQUID GLASS SIGN UP BUTTON ===== */
+
+.registerBtn {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.55);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+/* верхний блик */
+
+.registerBtn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    filter: blur(2px);
+}
+
+
+/* свечение снизу */
+
+.registerBtn::after {
+    content: "";
+
+    position: absolute;
+
+    left: 20%;
+    bottom: -25px;
+
+    width: 60%;
+    height: 45px;
+
+    background: rgba(80, 150, 255, 0.5);
+
+    filter: blur(20px);
+
+    transition: 0.3s;
+}
+
+
+/* hover */
+
+.registerBtn:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(80, 150, 255, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.65);
+}
+
+.registerBtn:hover::after {
+    background: rgba(130, 90, 255, 0.8);
+}
+
+
+/* ===== TERMS ===== */
+
+.container a {
+    color: #82b8ff;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== SIGN IN BLOCK ===== */
+
+.signin {
+    margin-top: 15px;
+
+    text-align: center;
+
+    padding: 18px 35px;
+}
+
+.signin p {
+    margin: 0;
+
+    color: #aeb8c7;
+}
+
+
+/* ===== THEME BUTTON ===== */
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="expense.css">
+    <link rel="icon" href="image/expense tracker.png">
+    <title>Expense</title>
+</head>
+<body>
+    <div id="side-bar"></div>
+            <main class="main-content">
+            <section class="expense-section">
+                <h1>Expenses</h1>
+                <p class="expense-track">Track and manage your expenses</p>
+                <form class="expense-form">
+                   <div class="total-expense">
+
+    <div class="expense-top">
+
+        <div class="expense-header">
+            <label>Total Expenses</label>
+            <p id="expense-totals">0.0 $</p>
+        <label>This month</label>
+        </div>
+
+        <button type="button" id="expenseBtn">
+            <i class="fa-solid fa-upload"></i> Add Expense
+        </button>
+</div>
+    </div>
+
+    <div class="expense-panel" id="expense-panel" >
+         <button id="close-expense">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <label>Name</label>
+    <input type="text" id="expense-name" placeholder="Enter expense name">
+        <label>Amount</label>
+        <input type="number" id="expense-amount" placeholder="0.00 $">
+        <label>Date</label>
+        <input type="date" id="expense-date">
+
+        <label>Category</label>
+        <select id="expense-category">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Bills">Bills</option>
+            <option value="Others">Others</option>
+        </select>
+
+        <button type="submit" id="saveBtn"><i class="fa-solid fa-upload"></i> Add Expense</button>
+    </div>
+
+
+        </form>
+        </section>
+        <section class="expense-categories">
+             <h2>Categories</h2>
+              <a href="transactions.html">View All</a>
+            <form class="categories-form">
+                <div class="category">
+                    <img src="image/food-no-bg-.png" class="category-icon food2"alt="Food">
+                <span class="text">Food</span>
+
+                <span class="amount" data-category="Food">0.00 $</span>
+                </div>
+                <div class="category">
+                    <img src="image/bus-no-bg.png" class="category-icon trans2" alt="Bus">
+                <span class="text" >Transport</span>
+
+                <span class="amount" data-category="Transport">0.00 $</span>
+                </div>
+                <div class="category">
+                    <img src="image/shopping-no-bg-.png" class="category-icon shop2" alt="cart">
+                    <span class="text">Shopping</span>
+                    <span class="amount" data-category="Shopping">0.00 $</span>
+
+                </div>
+                <div class="category">
+                     <img src="image/gamepad.png" class="category-icon entert2" alt="Gamepad">
+                    <span class="text">Entertainment</span>
+                    <span class="amount" data-category="Entertainment">0.00 $</span>
+                </div>
+                <div class="category">
+                    <img src="image/bills-no-bg.png" class="category-icon bills2" alt="Bills">
+                    <span class="text">Bills </span>
+                    <span class="amount" data-category="Bills">0.00 $</span>
+                </div>
+                <div class="category">
+                    <img src="image/others.png" class="category-icon others2" alt="others">
+                    <span class="text">Others </span>
+                    <span class="amount" data-category="Others">0.00 $</span>
+                </div>
+            </form>
+        </section>
+        <div id="recent-transactions"></div>
+        </main>
+        <script src="util.js"></script>
+        <script src="expense.js"></script>
+        <script src="sidebar.js"></script>
+
+</body>
+</html>
